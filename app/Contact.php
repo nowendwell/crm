@@ -2,10 +2,13 @@
 
 namespace App;
 
+use App\Traits\UsesUUID;
 use Illuminate\Database\Eloquent\Model;
 
 class Contact extends Model
 {
+    use UsesUUID;
+
     /**
      * The attributes that are mass assignable.
      *

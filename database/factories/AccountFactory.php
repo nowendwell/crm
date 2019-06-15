@@ -23,6 +23,7 @@ $factory->define(Account::class, function (Faker $faker) {
         'uuid' => $faker->uuid(),
         'name' => $faker->company(),
         'url' => $faker->url(),
-        'owner_id' => random_int(1, 10)
+        'owner_id' => random_int(1, 10),
+        'source' => $faker->url(),
     ];
 });

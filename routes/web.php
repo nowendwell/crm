@@ -1,5 +1,10 @@
 <?php
 
+
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,10 +16,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::view('/', 'welcome');
+
+Auth::routes();
+
+Route::middleware('auth')->group(function(){
+    Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+
+    Route::resource('account', 'AccountController');
+    Route::resource('contact', 'ContactController');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+

@@ -2,10 +2,13 @@
 
 namespace App;
 
+use App\Traits\UsesUUID;
 use Illuminate\Database\Eloquent\Model;
 
 class CustomField extends Model
 {
+    use UsesUUID;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -31,7 +34,7 @@ class CustomField extends Model
      */
     protected $casts = [
         //
-    ];    
+    ];
 
     /**
      * Get the CustomFieldData for the CustomField.

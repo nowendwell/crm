@@ -1,16 +1,17 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
 use App\Contact;
- 
+use App\Http\Controllers\Controller;
+
 class ContactAPIController extends Controller
 {
     public function index()
     {
         return Contact::all();
     }
- 
+
     public function show($id)
     {
         return Contact::with(['user', 'account'])->find($id);

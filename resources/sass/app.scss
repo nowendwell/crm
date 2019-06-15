@@ -4,5 +4,80 @@
 // Variables
 @import 'variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+#body-row {
+    margin-left:0;
+    margin-right:0;
+}
+
+#sidebar-container {
+    min-height: 100vh;
+    background-color: lighten(#2A4365, 2);
+    padding: 0;
+
+
+    /* Sidebar sizes when expanded and expanded */
+    &.sidebar-expanded {
+        width: 230px;
+    }
+
+    &.sidebar-collapsed {
+        width: 60px;
+    }
+
+    /* Menu item*/
+    .list-group a {
+        height: 50px;
+        color: white;
+    }
+
+    /* Submenu item*/
+    .list-group .sidebar-submenu a {
+        height: 45px;
+        padding-left: 30px;
+    }
+
+    .sidebar-submenu {
+        font-size: 0.9rem;
+    }
+
+    .list-group-item {
+        background-color: #2A4365;
+
+        &.active {
+            background-color: darken(#2A4365, 10);
+            border: none;
+        }
+    }
+
+    /* Separators */
+    .sidebar-separator-title {
+        background-color: #2A4365;
+        height: 35px;
+    }
+    .sidebar-separator {
+        background-color: #2A4365;
+        height: 25px;
+    }
+    .logo-separator {
+        background-color: #2A4365;
+        height: 60px;
+    }
+
+
+
+    /* Closed submenu icon */
+    .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
+        content: '\25b6'; /* You should use \ and not /*/
+        display: inline;
+        text-align: right;
+        padding-left: 10px;
+    }
+
+    /* Opened submenu icon */
+    .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
+        content: '\25bc';
+        display: inline;
+        text-align: right;
+        padding-left: 10px;
+    }
+}

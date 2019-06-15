@@ -1,16 +1,17 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
 use App\Organization;
- 
+use App\Http\Controllers\Controller;
+
 class OrganizationAPIController extends Controller
 {
     public function index()
     {
         return Organization::all();
     }
- 
+
     public function show($id)
     {
         return Organization::with(['users', 'accounts', 'customFields', 'customFieldData'])->find($id);

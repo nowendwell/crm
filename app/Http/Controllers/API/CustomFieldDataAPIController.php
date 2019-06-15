@@ -1,16 +1,17 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
 use App\CustomFieldData;
- 
+use App\Http\Controllers\Controller;
+
 class CustomFieldDataAPIController extends Controller
 {
     public function index()
     {
         return CustomFieldData::all();
     }
- 
+
     public function show($id)
     {
         return CustomFieldData::with(['customField', 'organization'])->find($id);

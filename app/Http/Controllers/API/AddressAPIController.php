@@ -1,16 +1,17 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
 use App\Address;
- 
+use App\Http\Controllers\Controller;
+
 class AddressAPIController extends Controller
 {
     public function index()
     {
         return Address::all();
     }
- 
+
     public function show($id)
     {
         return Address::with([])->find($id);

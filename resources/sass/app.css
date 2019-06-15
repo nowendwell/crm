@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
-
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 #body-row {
   margin-left: 0;
   margin-right: 0;
@@ -63,18 +62,17 @@
   height: 60px;
 }
 
-#sidebar-container .list-group .list-group-item[aria-expanded=false] .submenu-icon::after {
-  content: "\25B6";
+#sidebar-container .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
+  content: '\25b6';
   /* You should use \ and not /*/
   display: inline;
   text-align: right;
   padding-left: 10px;
 }
 
-#sidebar-container .list-group .list-group-item[aria-expanded=true] .submenu-icon::after {
-  content: "\25BC";
+#sidebar-container .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
+  content: '\25bc';
   display: inline;
   text-align: right;
   padding-left: 10px;
 }
-

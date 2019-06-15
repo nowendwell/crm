@@ -2,10 +2,13 @@
 
 namespace App;
 
+use App\Traits\UsesUUID;
 use Illuminate\Database\Eloquent\Model;
 
 class Address extends Model
 {
+    use UsesUUID;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -31,5 +34,5 @@ class Address extends Model
      */
     protected $casts = [
         //
-    ];    
+    ];
 }

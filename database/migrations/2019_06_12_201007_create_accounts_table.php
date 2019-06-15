@@ -22,6 +22,7 @@ class CreateAccountsTable extends Migration
             $table->string('url');
             $table->unsignedBigInteger('owner_id')->nullable();
             $table->foreign('owner_id')->references('id')->on('users');
+            $table->string('source')->nullable();
             $table->timestamps();
         });
     }

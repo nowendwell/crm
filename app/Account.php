@@ -2,10 +2,13 @@
 
 namespace App;
 
+use App\Traits\UsesUUID;
 use Illuminate\Database\Eloquent\Model;
 
 class Account extends Model
 {
+    use UsesUUID;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -31,7 +34,7 @@ class Account extends Model
      */
     protected $casts = [
         //
-    ];    
+    ];
 
     /**
      * Get the Contacts for the Account.

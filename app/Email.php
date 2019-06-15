@@ -2,10 +2,13 @@
 
 namespace App;
 
+use App\Traits\UsesUUID;
 use Illuminate\Database\Eloquent\Model;
 
 class Email extends Model
 {
+    use UsesUUID;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -31,5 +34,5 @@ class Email extends Model
      */
     protected $casts = [
         //
-    ];    
+    ];
 }

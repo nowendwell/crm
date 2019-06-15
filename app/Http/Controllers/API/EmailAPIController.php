@@ -1,16 +1,17 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
 use App\Email;
- 
+use App\Http\Controllers\Controller;
+
 class EmailAPIController extends Controller
 {
     public function index()
     {
         return Email::all();
     }
- 
+
     public function show($id)
     {
         return Email::with([])->find($id);

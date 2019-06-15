@@ -1,16 +1,17 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
 use App\Phone;
- 
+use App\Http\Controllers\Controller;
+
 class PhoneAPIController extends Controller
 {
     public function index()
     {
         return Phone::all();
     }
- 
+
     public function show($id)
     {
         return Phone::with([])->find($id);
