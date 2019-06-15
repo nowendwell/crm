@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94d4bf9ac7f4a933030e46a346ee2917",
+    "content-hash": "2e7c4b61211b2e797423b52e64f63156",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1103,6 +1103,47 @@
                 "type"
             ],
             "time": "2015-07-25T16:39:46+00:00"
+        },
+        {
+            "name": "pipe-dream/laravel",
+            "version": "v0.0.44",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pipe-dream/laravel.git",
+                "reference": "3d9e4150d186b531360d4e49f98f2f0809691797"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pipe-dream/laravel/zipball/3d9e4150d186b531360d4e49f98f2f0809691797",
+                "reference": "3d9e4150d186b531360d4e49f98f2f0809691797",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3"
+            },
+            "type": "package",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "PipeDream\\Laravel\\PipeDreamServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PipeDream\\Laravel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Watch how this package DESTROYS all other generators. Boilerplate repos HATE it!",
+            "keywords": [
+                "laravel",
+                "package"
+            ],
+            "time": "2019-06-12T05:17:09+00:00"
         },
         {
             "name": "psr/container",

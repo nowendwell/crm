@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'api_token', 'organization_id'
     ];
 
     /**
@@ -25,7 +25,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token'
     ];
 
     /**
@@ -34,6 +34,33 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        'email_verified_at' => 'datetime'
     ];
+
+    /**
+     * Get the Accounts for the User.
+     */
+    public function accounts()
+    {
+        return $this->hasMany(\App\Account::class, 'owner_id');
+    }
+
+
+    /**
+     * Get the Contacts for the User.
+     */
+    public function contacts()
+    {
+        return $this->hasMany(\App\Contact::class, 'owner_id');
+    }
+
+
+    /**
+     * Get the Organization for the User.
+     */
+    public function organization()
+    {
+        return $this->belongsTo(\App\Organization::class);
+    }
+
 }
